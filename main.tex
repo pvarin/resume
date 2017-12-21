@@ -1,0 +1,62 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={7in, 9in}]{geometry}\usepackage{titlesec}
+\usepackage{ragged2e}
+
+% format section headers
+\titleformat{\section}
+  {\normalfont\fontsize{14}{16}\bfseries}{\thesection}{1em}{}
+ 
+% define new commands
+\newcommand{\name}[1]{\begin{center}\LARGE\textbf{#1}\end{center}}
+\newcommand{\newitem}[2]{\item \textbf{ #1 \hfill #2}\\}
+
+% document
+\begin{document}
+\name{Patrick Varin}
+\justify
+\section*{Mission}
+My goal is to bring state of the art robotics research to consumer and industrial applications by designing efficient algorithms for robust control and estimation.
+
+\section*{Education}
+\begin{itemize}
+\newitem{Harvard University: Doctoral Candidate}{2016-Present}
+Degree: Candidate for Ph.D. in Computer Science\\
+GPA: 3.83
+
+\newitem{Franklin W. Olin College of Engineering}{2010-2014}
+Degree: B.S. Engineering with a concentration in Robotics\\
+GPA: 3.80
+
+\end{itemize}
+\section*{Experience}
+\begin{itemize}
+\newitem{Facebook: Product Manager}{2014-2016}
+I have led a number of teams ranging in size from 5 to 17 that have included engineering, design, marketing and analytics. My responsibilities include product vision, building roadmaps, and coordination.
+
+\newitem{Olin College of Engineering: Teacher's Assistant}{2011-2014}
+I have been a teachers assistant for courses such as \emph{Modeling and Control of the Physical World}, \emph{Linear Algebra}, \emph{Differential Equations}, \emph{Partial Differential Equations}, \emph{Signals and Systems}, and \emph{Robotics}. My responsibilities included giving supplemental lectures, grading papers, holding office hours, and designing exams.
+
+\newitem{University of Notre Dame: Research in Medical Robotics}{Summer 2013}
+On a team of two, I worked towards developing a hyper-realistic robotic manikin capable of speech and facial expression. This manikin is intended for used in medical training.
+
+\newitem{University of Minnesota: Research in Dynamics of Pattern Formation}{Summer 2012}
+On a team of four, I conducted research on the dynamics of pattern formation in a model of chemotaxis. I developed the numerical tools that we used to discover a previously unrecorded behavior. Our results are published in the SIAM Undergraduate Research Journal.
+\end{itemize}
+
+\section*{Publications}
+\begin{itemize}
+\newitem{Invasion Fronts and Pattern Formation in a Model of Chemotaxis in One and Two Dimensions}{}
+SIAM Undergraduate Research Online (2013)
+
+\end{itemize}
+
+\section*{Notable Projects}
+\begin{itemize}
+\newitem{Senior Capstone in Engineering}{2013-2014}
+Led a team of five Olin seniors in partnership with Analogic Corp to develop signal processing techniques for single photon counting in high energy X-Ray technology for application in medial and security imaging.
+
+\newitem{SAE Baja: Electrical Team Leader}{2013-2014}
+I recruited and led a team of 12 undergraduate electrical and computer engineering students to design and build the software and sensor suite for an off-road vehicle. This data was critical in the design of the car as well as providing the driver with real time 
+\end{itemize}
+\end{document}
