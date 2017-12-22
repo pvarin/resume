@@ -1,62 +1,89 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
-\usepackage[a4paper, total={7in, 9in}]{geometry}\usepackage{titlesec}
-\usepackage{ragged2e}
+
+
+\usepackage[a4paper, total={6in, 9in}]{geometry}
+
+% remove page numbering
+\pagestyle{empty}
 
 % format section headers
-\titleformat{\section}
-  {\normalfont\fontsize{14}{16}\bfseries}{\thesection}{1em}{}
- 
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\fontsize{14}{16}\bfseries}{\thesection}{1em}{}
+\titlespacing{\section}{0pt}{16pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}
+
+% format lists to remove space and use dash bullets
+\usepackage{enumitem}
+\setlist{nosep}
+\renewcommand\labelitemi{--}
+
 % define new commands
-\newcommand{\name}[1]{\begin{center}\LARGE\textbf{#1}\end{center}}
-\newcommand{\newitem}[2]{\item \textbf{ #1 \hfill #2}\\}
+\newcommand{\name}[1]{\begin{center}\huge\textbf{#1}\end{center}\vspace{1em}}
+\newcommand{\personal}[4]{
+	\noindent#1\hfill#3\\
+	#2\hfill#4
+}
+%\newcommand{\personal}[4]{
+%	\moveleft.5\hoffset\centerline{#1}
+%	\moveleft.5\hoffset\centerline{#2}
+%	\moveleft.5\hoffset\centerline{#3}
+%	\moveleft.5\hoffset\centerline{#4}
+%}
+\newcommand{\newitem}[2]{\noindent\textbf{#1 \hfill #2}\\}
+\newcommand{\gimmespace}{\vspace{1em}}
 
 % document
 \begin{document}
 \name{Patrick Varin}
-\justify
+\personal{38 2nd Street}{Cambridge, MA 02141}{(262) 844-0294}{patrickjvarin@gmail.com}
 \section*{Mission}
-My goal is to bring state of the art robotics research to consumer and industrial applications by designing efficient algorithms for robust control and estimation.
+\noindent My goal is to bring state-of-the-art robotics research to consumer and industrial applications by designing efficient algorithms for robust control, state estimation, and filtering.
 
 \section*{Education}
-\begin{itemize}
 \newitem{Harvard University: Doctoral Candidate}{2016-Present}
 Degree: Candidate for Ph.D. in Computer Science\\
 GPA: 3.83
+\gimmespace
 
 \newitem{Franklin W. Olin College of Engineering}{2010-2014}
 Degree: B.S. Engineering with a concentration in Robotics\\
 GPA: 3.80
 
-\end{itemize}
 \section*{Experience}
-\begin{itemize}
+
+\newitem{Harvard Agile Robotics Lab: PhD Researcher}{2016-Present}
+I am conducting research on algorithms for control and estimation in the presence of rigid body contact. Specifically I am interested in applications such as robot locomotion and manipulation.
+\gimmespace
+
 \newitem{Facebook: Product Manager}{2014-2016}
-I have led a number of teams ranging in size from 5 to 17 that have included engineering, design, marketing and analytics. My responsibilities include product vision, building roadmaps, and coordination.
+I led teams of 8-17 engineers, marketers, designers, and data analysts at Facebook.
+\begin{itemize}
+\item Built the machine learning backend for notifications resulting in 40\% increase in click-through rate.
+\item Grew Facebook commerce groups--now larger than Craigslist--part of Facebook's core strategy.
+\item Re-architected Facebook NewsFeed, increasing engagement on low performance Android phones by 30\%.
+\end{itemize}
+\gimmespace
 
 \newitem{Olin College of Engineering: Teacher's Assistant}{2011-2014}
 I have been a teachers assistant for courses such as \emph{Modeling and Control of the Physical World}, \emph{Linear Algebra}, \emph{Differential Equations}, \emph{Partial Differential Equations}, \emph{Signals and Systems}, and \emph{Robotics}. My responsibilities included giving supplemental lectures, grading papers, holding office hours, and designing exams.
+\gimmespace
 
 \newitem{University of Notre Dame: Research in Medical Robotics}{Summer 2013}
-On a team of two, I worked towards developing a hyper-realistic robotic manikin capable of speech and facial expression. This manikin is intended for used in medical training.
+I worked on a team developing a hyper-realistic robotic manikin capable of speech and facial expression, intended for used in medical training. I was personally responsible for the software and electronics.
+\gimmespace
 
 \newitem{University of Minnesota: Research in Dynamics of Pattern Formation}{Summer 2012}
-On a team of four, I conducted research on the dynamics of pattern formation in a model of chemotaxis. I developed the numerical tools that we used to discover a previously unrecorded behavior. Our results are published in the SIAM Undergraduate Research Journal.
-\end{itemize}
+On a team of four, I conducted research on the dynamics of pattern formation in a model of chemotaxis. I developed the numerical tools that we used to discover a previously unrecorded behavior. Our results are published in the Society of Industrial and Applied Mathematics (SIAM) Undergraduate Research Journal.
 
 \section*{Publications}
-\begin{itemize}
 \newitem{Invasion Fronts and Pattern Formation in a Model of Chemotaxis in One and Two Dimensions}{}
 SIAM Undergraduate Research Online (2013)
 
-\end{itemize}
-
 \section*{Notable Projects}
-\begin{itemize}
-\newitem{Senior Capstone in Engineering}{2013-2014}
-Led a team of five Olin seniors in partnership with Analogic Corp to develop signal processing techniques for single photon counting in high energy X-Ray technology for application in medial and security imaging.
+\newitem{Senior Capstone in Engineering: Project Manager}{2013-2014}
+I led a team of five Olin seniors in partnership with Analogic Corp. to develop signal processing techniques for single photon counting in high energy X-ray technology for application in medical and security imaging.
+\gimmespace
 
-\newitem{SAE Baja: Electrical Team Leader}{2013-2014}
-I recruited and led a team of 12 undergraduate electrical and computer engineering students to design and build the software and sensor suite for an off-road vehicle. This data was critical in the design of the car as well as providing the driver with real time 
-\end{itemize}
+\newitem{Baja Society of Automotive Engineers: Electrical Team Leader}{2013-2014}
+I recruited and led a team of 12 undergraduate electrical and computer engineering students to design and build the software and sensor suite for an off-road vehicle. This data was critical in the design of the car as well as providing the driver with real time diagnostic data.
 \end{document}
